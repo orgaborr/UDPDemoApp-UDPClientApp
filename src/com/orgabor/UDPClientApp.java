@@ -24,6 +24,7 @@ public class UDPClientApp {
 				
 				byte[] buffer = echoString.getBytes();
 				DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 5000);
+				datagramSocket.send(packet);
 			} while(!echoString.contentEquals("exit"));
 			
 			
